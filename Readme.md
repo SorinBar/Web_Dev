@@ -7,4 +7,6 @@
     >[HTML & CSS Full Course - Beginner to Pro (2022)](https://www.youtube.com/watch?v=G3e-cpL7ofc&ab_channel=SuperSimpleDev) - In progress 1:03:00
 
 - Learning CSS
+
+    >[HTML & CSS Full Course - Beginner to Pro (2022)](https://www.youtube.com/watch?v=G3e-cpL7ofc&ab_channel=SuperSimpleDev) - In progress 1:03:00
 - Learning Javascript
