@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .number {
+        font-size: 18px;
+        margin: 4px;
+      }
+
+      button.top {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      #back {
+        margin-right: 8px;
+      }
+
+      #next {
+        margin-left: 8px;
+      }
+
+      button.green {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+
+      #str {
+        height: 20px;
+        width: 60px;
+        transition: height 0.15s, width 0.15s;
+      }
+      #str:hover {
+        height: 40px;
+        width: 120px;
+      }
+
+      #shadow {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+      }
+      #shadow:active {
+        margin-top: 5px;
+        margin-left: 5px;
+        box-shadow: 0px 0px 0px white;
+      }
+
+      button.pack {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      button.pack:hover {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="back" class="top">Back</button>
+    <a href="https://google.com" class="number">1</a>
+    <a href="https://google.com" class="number">2</a>
+    <a href="https://google.com" class="number">3</a>
+    <a href="https://google.com" class="number">4</a>
+    <a href="https://google.com" class="number">5</a>
+    <button id="next" class="top">Next</button>
+
+    <br />
+    <br />
+
+    <button id="str" class="green">Strech</button>
+
+    <br />
+    <br />
+
+    <button id="shadow" class="green">Shadow</button>
+
+    <br />
+    <br />
+
+    <button class="green pack">One</button>
+    <button class="green pack">Two</button>
+    <button class="green pack">Three</button>
+  </body>
+</html>
