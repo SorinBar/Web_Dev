@@ -1,0 +1,131 @@
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.profile-add {
+    width: 322px;
+    margin-bottom: 10px;
+}
+
+.picture-area {
+    vertical-align: middle;
+    display: inline-block;
+    width: 50px;
+}
+
+.text-area {
+    vertical-align: middle;
+    display: inline-block;
+    width: 180px;
+    margin-left: 10px;
+}
+
+.button-area {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.profile-picture {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.profile-name {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.profile-desc {
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: gray;
+}
+
+.profile-trend {
+    font-size: 12px;
+    color: gray;
+}
+
+.follow-button {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(44, 137, 251);
+    border: none;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.add-profile-old {
+    border: none;
+    display: inline-block;
+    font-family: sans-serif;
+    width: 160px;
+    box-shadow: 0px 0px 6px rgba(133, 133, 133, 0.286);
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.profile-img-old {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.profile-name-old {
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 6px;
+}
+.profile-mutual-old {
+    color: gray;
+    font-size: small;
+}
+.profile-add-old {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 6px;
+    margin-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(15, 138, 254);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.friends {
+    margin-top: 2px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
+
+.friend-picture-area {
+    vertical-align: middle;
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+}
+
+.friend-picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.friends-couter {
+    vertical-align: middle;
+    display: inline-block;
+}
