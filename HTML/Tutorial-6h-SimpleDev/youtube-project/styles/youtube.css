@@ -1,0 +1,20 @@
+.search-bar {
+    display: block;
+    margin-left: 10px;
+}
+.thumbnail {
+    width: 300px;
+}
+.video-author {
+}
+.video-stats {
+
+}
+
+.video-preview {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+

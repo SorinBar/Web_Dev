@@ -1,0 +1,98 @@
+#img1 {
+    height: 200px;
+    border-radius: 20px;
+}
+#img2 {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: left;
+
+}
+#img3 {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 100px;
+}
+
+#search1 {
+    height: 30px;
+    width: 160px;
+    border-radius: 6px;
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    text-indent: 6px;
+}
+
+#search2 {
+    height: 30px;
+    width: 400px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(174, 174, 174, 0.817);
+    border-radius: 20px;
+    text-indent: 10px;
+}
+
+#s-desc3a {
+    margin-bottom: 4px;
+    color: gray;
+    font-size: 12px;
+}
+#search3 {
+    height: 20px;
+    width: 280px;
+    border-radius: 2px;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+}
+#s-desc3b {
+    margin-bottom: 10px;
+    color: gray;
+    font-size: 10px;
+}
+#button3 {
+    height: 40px;
+    width: 286px;
+    border: none;
+    background-color: rgb(28, 75, 168);
+    color: white;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+#img4 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 100px;
+    vertical-align: middle;
+}
+
+#tweet {
+    height: 50px;
+    width: 240px;
+    border: none;
+    border-radius: 20px;
+    text-indent: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+#tweet-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: rgb(79, 161, 255);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    vertical-align: middle;
+}
