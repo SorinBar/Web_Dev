@@ -1,0 +1,75 @@
+.flex-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgba(128, 128, 128, 0.357);
+    width: 300px;
+}
+.notification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.type {
+    font-size: 16px;
+}
+.number {
+    background-color: rgb(48, 117, 236);
+    color: white;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.flex-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(113, 65, 186);
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-indent: 16px;
+    height: 22px;
+    border: none;
+    border-radius: 11px;
+}
+
+.download-button {
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}

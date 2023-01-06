@@ -1,13 +1,5 @@
-p {
-    font-family: Roboto, Arial;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.search-bar {
-    display: block;
-}
 .thumbnail {
-    width: 300px;
+    width: 100%;
 }
 
 .video-title {
@@ -19,22 +11,13 @@ p {
 }
 
 .video-preview {
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 15px;
 }
 
-.channel-picture {
-    display: inline-block;
-    width: 50px;
-    vertical-align: top;
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
 }
 
-.video-info {
-    display: inline-block;
-    width: 200px;
-}
 .profile-picture {
     width: 40px;
     border-radius: 20px;
@@ -51,4 +34,11 @@ p {
 
 .video-author {
     margin-bottom: 4px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
 }
