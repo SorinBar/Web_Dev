@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="styles/position_ex.css">
 </head>
 
-<body style="height: 3000px;">
+<body style="height: 3000px; position: relative;">
     <!--
         Comment {display: none;} to show result of the exercise
     -->
     <!-- 14a -->
     <div style="
         display: none;
+
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -26,6 +27,7 @@
     <!-- 14b -->
     <div style="
         display: none;
+
         position: fixed;
         top: 0;
         bottom: 0px;
@@ -39,6 +41,7 @@
     <!-- 14c -->
     <div style="
         display: none;
+
         position: fixed;
         top: 0;
         bottom: 0;
@@ -154,7 +157,7 @@
         </div>
     </div>
 
-     <!-- 14e -->
+    <!-- 14f -->
     <div style="
         position: fixed;
         top: 0;
@@ -165,7 +168,7 @@
         display: flex;
         flex-direction: row;
 
-        background-color: aqua;
+        display: none;
     ">
         <div style="
             display: flex;
@@ -245,6 +248,157 @@
         </div>
     </div>
 
+    <!-- 15a -->
+    <div style="
+        display: none;
+
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 500;
+        padding: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-radius: 22px;
+    ">X</div>
+
+    <!-- 15b -->
+    <div style="
+        display: none;
+
+        height: 180px;
+        width: 320px;
+        background-color: gray;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    "></div>
+
+    <!-- 15c -->
+    <div style="
+        display: none;
+
+        height: 180px;
+        width: 320px;
+        background-color: gray;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    ">
+        <div style="
+            height: 100%;
+            width: 100%;
+            position: relative;
+        ">
+            <div style="
+                position: absolute;
+                top: -10px;
+                left: -14px;
+                background-color: black;
+                color: white;
+                font-family: sans-serif;
+                font-weight: 500;
+                padding: 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-radius: 22px;
+            ">X</div>
+        </div>
+    </div>
+
+    <!-- 15d -->
+    <div style="
+        display: none;
+
+        height: 180px;
+        width: 320px;
+        background-color: gray;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    ">
+        <div style="
+            height: 100%;
+            width: 100%;
+            position: relative;
+        ">
+            <div style="
+                position: absolute;
+                top: -10px;
+                left: -14px;
+                background-color: black;
+                color: white;
+                font-family: sans-serif;
+                font-weight: 500;
+                padding: 10px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-radius: 22px;
+            ">X</div>
+            <div style="
+                position: absolute;
+                bottom: 6px;
+                right: 6px;
+                background-color: black;
+                color: white;
+                font-family: sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 8px;
+                padding-top: 4px;
+                padding-bottom: 6px;
+                border-radius: 2px;
+            ">0:29</div>
+        </div>
+    </div>
+
+    <!-- 15e -->
+    <div style="
+        display: none;
+
+        position: relative;
+        height: 200px;
+        width: 200px;
+    ">
+        <img style="
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        "src="./images/jacket.jpeg" alt="jacket picture">
+        <div style="
+            position: absolute;
+            top: 6px;
+            right: 0;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 2px;
+            padding-left: 8px;
+            padding-right: 8px;
+        ">
+            20% OFF
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
+    <!-- 15f -->
+    <div class="product-container">
+        <img class="product-image"src="./images/jacket.jpeg" alt="jacket picture">
+        <div class="product-discount">
+            20% OFF
+        </div>
+        <div class="add-to-cart-containter">
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
 </body>
 
 </html>
