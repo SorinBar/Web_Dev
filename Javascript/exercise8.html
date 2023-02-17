@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorin Todo App</title>
+</head>
+<body>
+    <input id="todo-title" type="text"/>
+    <button id="todo-button" onclick="addTodo()">Add Todo</button>
+    <button id="up-button" onclick="counterIncrease()">Up</button>
+    <button id="down-button" onclick="counterDecrease()">Down</button>
+    <div id="counter">0</div>
+    <script>
+        let todos = ['Get groceries', 'Wash car', 'Make dinner'];
+        let counter = 0;
+
+        todos.forEach(function(todoTitle){
+            let element = document.createElement('div');
+            element.innerText = todoTitle;
+            document.body.appendChild(element);
+        });
+
+        function addTodo() {
+            let textbox = document.getElementById("todo-title");
+            let title = textbox.value;
+            let div = document.createElement('div');
+            todos.push(title);
+            div.innerText = title;
+            document.body.appendChild(div);
+        }
+
+        function counterIncrease() {
+            let div = document.getElementById('counter');
+            counter++;
+            div.innerText = counter;
+        }
+
+        function counterDecrease() {
+            let div = document.getElementById('counter');
+            counter--;
+            div.innerText = counter;
+        }
+
+    </script>
+</body>
+</html>

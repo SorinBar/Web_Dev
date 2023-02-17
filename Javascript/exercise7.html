@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <script>
+        let array = [];
+
+        function toUpper(array) {
+            let arrayUpper = [];
+            array.forEach(function (string) {
+                arrayUpper.push(string.toUpperCase());
+            });
+            console.log(arrayUpper);
+        }
+
+        function arrayDouble(array) {
+            let result = [];
+            array.forEach(function (string) {
+               result.push(string);
+               result.push(string);
+            });
+            console.log(result);
+        }
+
+        function arraySum(array) {
+            let total = 0;
+            array.forEach(function(number) {
+                total += number;
+            })
+            console.log(total);
+        }
+
+        array.push('str1');
+        array.push('str2');
+        array.push('str3');
+        toUpper(array);
+        arrayDouble(array);
+        arraySum([1, 2, -3, 4]);
+
+    </script>
+</body>
+</html>

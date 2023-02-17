@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Learning</title>
-    <script>
-        let todo1 = 4 + 5 * 3;
-        let todo2 = 'Wash car';
-        let todo3 = 'Make dinner';
-        alert("I am " + todo1 + " old");
-    </script>
+    <title>Sorin Todo App</title>
 </head>
 <body>
-    <button>Press me</button>
+    <input id="todo-title" type="text"/>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <div id="todo-list"></div>
+    <script>
+        const todos = ['Get groceries', 'Wash car', 'Make dinner'];
+        
+        render();
+
+        function addTodo() {
+            const textbox = document.getElementById("todo-title");
+            const title = textbox.value;
+            todos.push(title);
+
+            render();
+        }
+
+        function render (){
+            // reset our list
+            document.getElementById('todo-list').innerHTML = '';
+
+            todos.forEach(function(todoTitle){
+                const element = document.createElement('div');
+                element.innerText = todoTitle;
+                const todoList = document.getElementById('todo-list');
+                todoList.appendChild(element);
+            });
+        }
+
+    </script>
 </body>
 </html>
