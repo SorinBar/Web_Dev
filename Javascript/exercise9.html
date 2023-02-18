@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises 9</title>
+</head>
+<body>
+    <button onclick="addToCart('Apple')">Apple</button>
+    <button onclick="addToCart('Tomato')">Tomato</button>
+    <button onclick="addToCart('Eggs')">Eggs</button>
+    <button onclick="clearCart()">Clear</button>
+    <input id="input_textbox" type="text">
+    <button onclick="inchToCm()">Convert to cm</button>
+    <button onclick="cmToInch()">Convert to inch</button>
+    <div id="cart"></div>
+    <div id="result"></div>
+    <script>
+        // 1
+        let cartDiv = document.getElementById('cart');
+
+        function addToCart(itemName) {
+            let itemDiv = document.createElement('div');
+            itemDiv.innerText = itemName;
+            cart.appendChild(itemDiv);
+        }
+        function clearCart() {
+            cartDiv.innerHTML = '';
+        }
+        // 2
+        let resultDiv = document.getElementById('result');
+        let inputText = document.getElementById('input_textbox');
+
+        function inchToCm() {
+            let len = inputText.value;
+            resultDiv.innerText = len * 2.54;
+        }
+        function cmToInch() {
+            let len = inputText.value;
+            resultDiv.innerText = len / 2.54;
+        }
+
+
+    </script>
+</body>
+</html>
