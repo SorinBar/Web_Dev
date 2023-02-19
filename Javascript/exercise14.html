@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorin Todo App</title>
+</head>
+<body>
+    <input id="todo-title" type="text"/>
+    <input id="date-picker" type="date"/>
+    <button onclick="addTodo()">Add Todo</button>
+
+    <div id="todo-list"></div>
+    <script>
+        // Model 
+        let todos = [{
+            title: 'Get groceries',
+            dueDate: '2021-10-04',
+            id: 'id1',
+            done: false
+        }, {
+            title: 'Wash car',
+            dueDate: '2021-12-04',
+            id: 'id2',
+            done: false
+        }, {
+            title: 'Make dinner',
+            dueDate: '2021-2-04',
+            id: 'id3',
+            done: false
+        }];        
+        // Creates a todo
+        function createTodo(title, dueDate) {
+            const id = String(new Date().getTime());
+
+            todos.push({
+                title: title,
+                dueDate: dueDate,
+                id: id
+            });
+        }
+        // Deletes a todo
+        function removeTodo(idToDelete) {
+            todos = todos.filter(function (todo) {
+                return todo.id !== idToDelete;
+            });
+        }
+        // Do/Undo todo
+        function changeStateTodo(id, state) {
+            for (let i = 0; i < todos.length; i++)
+                if (todos[i].id === id) {
+                    todos[i].done = state;
+                    break;
+                }
+        }      
+        // View
+        function render (){
+            // Reset our list
+            const todoList = document.getElementById('todo-list');
+            todoList.innerHTML = '';
+            todos.forEach(function(todo){
+                const element = document.createElement('div');        
+                const deleteButton = document.createElement('button');
+                const checkBox = document.createElement('input');
+
+                deleteButton.innerText = 'Delete';
+                deleteButton.style = 'margin-left: 12px;';
+                deleteButton.onclick = deleteTodo;
+                deleteButton.id = todo.id;
+
+                checkBox.type = 'checkbox';
+                checkBox.id = 'CB' + todo.id;
+                checkBox.onchange = checkTodo;
+                checkBox.checked = todo.done;
+
+                element.innerText = todo.title + ' ' + todo.dueDate;
+                if (todo.done === false) {
+                    element.innerText += ' []';
+                }
+                else {
+                    element.innerText += ' [Done]';
+                }
+                element.appendChild(deleteButton);
+                element.prepend(checkBox);
+
+                todoList.appendChild(element);
+            });
+        }
+        // Controller
+        function addTodo() {
+            const textbox = document.getElementById("todo-title");
+            const title = textbox.value;
+
+            const datePicker = document.getElementById('date-picker');
+            const dueDate = datePicker.value;
+            
+            createTodo(title, dueDate);
+
+            render();
+        }
+        function deleteTodo(event) {
+            const deleteButton = event.target;
+            const idToDelete = deleteButton.id;
+
+            removeTodo(idToDelete);
+    
+            render();
+        } 
+        function checkTodo(event) {
+            const checkBox = event.target;
+            
+            changeStateTodo(checkBox.id.substring(2, checkBox.id.length),
+                checkBox.checked);
+            
+            render();
+        }
+        
+        render();
+
+    </script>
+</body>
+</html>

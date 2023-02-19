@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises 13</title>
+</head>
+<body>
+    <script>
+        // 1
+        let arrayInt = [1, 2, -1, 324, 22, -112, 0, 223];
+        
+        function max(array) {
+            let maxInt = array[0];
+            array.forEach(element => {
+                if (element > maxInt)
+                    maxInt = element;
+            });
+            return maxInt;
+        }
+        function min(array) {
+            let minInt = array[0];
+            array.forEach(element => {
+                if (element < minInt)
+                    minInt = element;
+            });
+            return minInt;
+        }
+        function minSpecial(array) {
+            let i = 0;
+            let myMin = -1;
+
+            for (i; i < array.length; i++) {
+                if (array[i] >= 0) {
+                    myMin = array[i];
+                    break;
+                }
+            }
+            for (i; i < array.length; i++) {
+                if (array[i] >= 0 && myMin > array[i]) {
+                    myMin = array[i];
+                }
+            }
+
+            return myMin;
+        }
+
+        console.log(max(arrayInt));
+        console.log(min(arrayInt));
+        console.log(minSpecial(arrayInt));
+
+        // 2
+
+        let fruits = ['cherry', 'apple', 'orange', 'orange', 'apple', 'banana', 'apple'];
+
+        function pickApples(array) {
+            let count = 0;
+            return array.filter(function (element) {
+                if (count < 2) {
+                    if (element == 'apple') {
+                        count++;
+                        return false;
+                    }
+                }
+                return true;
+            });
+        }
+        function pickFruits(array) {
+            let apples = 0;
+            let oranges = 0;
+            return array.filter(function (element) {
+                if (apples < 2) {
+                    if (element == 'apple') {
+                        apples++;
+                        return false;
+                    }
+                }
+                if (oranges < 1) {
+                    if (element == 'orange') {
+                        oranges++;
+                        return false;
+                    }
+                }
+                return true;
+            });
+        }
+
+        console.log(pickApples(fruits));
+        console.log(pickFruits(fruits));
+
+        // 3
+        function pickLastApples(array) {
+            array = array.reverse();
+            let count = 0;
+            return array.filter(function (element) {
+                if (count < 2) {
+                    if (element == 'apple') {
+                        count++;
+                        return false;
+                    }
+                }
+                return true;
+            }).reverse();
+        }
+
+        console.log(pickLastApples(fruits));
+
+
+    </script>
+</body>
+</html>

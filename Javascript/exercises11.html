@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises 11</title>
+</head>
+<body>
+    <div id="cart"></div>
+    <script>
+        let pricesObj = {Apple: 3, Orange: 4, Egg: 2};
+        let cartDiv = document.getElementById('cart');
+        let total = 0;
+
+        function createCart(prices) {
+            let keys = Object.keys(prices);
+            let newDiv;
+            let newButton;
+
+            for (let i = 0; i < keys.length; i++) {
+                newDiv = document.createElement('div');
+                newDiv.innerText = keys[i] + ': $' + prices[keys[i]];
+                newButton = document.createElement('button');
+                newButton.innerText = 'Add';
+                newButton.style = 'margin-left: 12px;';
+                newButton.id = keys[i];
+                newButton.onclick = addClick;
+                newDiv.appendChild(newButton);
+                cartDiv.appendChild(newDiv);
+            }
+            newDiv = document.createElement('div');
+            newDiv.id = 'totalDiv';
+            newDiv.innerText = 'Total Price: $0';
+            cartDiv.appendChild(newDiv);
+        }
+
+        function addClick(event) {
+            let button = event.target;
+            total += pricesObj[button.id];
+            document.getElementById('totalDiv').innerText =
+                'Total Price: $' + total;
+        }
+
+        createCart(pricesObj);
+
+    </script>
+</body>
+</html>
